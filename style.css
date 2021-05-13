@@ -138,9 +138,9 @@ nav{
 	display: none;
 }
 .model-content{
-	width: 500px;
-	height: 300px;
-	background-color:white ;
+	width: 700px;
+	height: 400px;
+	background-color:rgb(27, 36, 56) ;
 	border-radius: 4px;
 	position: relative;
 }
@@ -151,10 +151,24 @@ nav{
 	font-size: 42px;
 	transform: rotate(45deg);
 	cursor: pointer;
+	color: white;
+}
+.info-popup-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-
-
+.assistance,.info{
+	margin-top: 10px;
+}
+.call{
+	margin-top: 50px;
+}
+.logo{
+	margin-top: 30px;
+}
 
 @media only screen and (min-width: 300px) and (max-width:500px) {
 	
