@@ -27,11 +27,11 @@
                         <script> document.write(new Date().toLocaleTimeString());</script>
                     </a></li>
                 <div class="another-c">
-                    <li><a class="nav-link fcolor" href="#">
+                    <li><a class="nav-link fcolor" id="question" href="#">
                             <!-- <h5>questions</h5> -->
                             <img src="images/gquestion.png" style="height: 20px;" alt="">
                         </a></li>
-                    <li><a class="nav-link fcolor rclass" href="#">
+                    <li><a class="nav-link fcolor rclass" href="settings.html">
                             <img src="images/outline_settings_white_24dp.png" style="height: 20px;" alt="">
                         </a></li>
                 </div>
@@ -103,6 +103,25 @@
             </div>
         </div>
     </main>
+
+
+    <!-- modal section -->
+    <div class="bg-model">
+        <div class="model-content">
+            <div class="close">+</div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById('question').addEventListener('click', function () {
+            document.querySelector('.bg-model').style.display = 'flex';
+        });
+
+        document.querySelector('.close').addEventListener('click', function () {
+            document.querySelector('.bg-model').style.display = 'none'
+        });
+    </script>
 </body>
 
 </html>

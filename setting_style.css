@@ -1,0 +1,258 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+    color: white;
+}
+
+
+
+input[type='radio']:checked:after {
+   background-color:orange ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+header{
+    background-color: rgb(27, 36, 56);
+    display: flex;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.home-logo,
+.airiq,
+.nav-links{
+    display: flex;
+}
+.home-logo{
+    flex: 2;
+}
+nav{
+    flex: 2;
+}
+.nav-links {
+	justify-content: space-around;
+	list-style: none;
+}
+.nav-link {
+	color: #5f5f79;
+	font-size: 18px;
+	text-decoration: none;
+	margin-right: 2px;
+}
+.airiq{
+    flex: 6;
+    justify-content: space-around;
+}
+.fcolor{
+    color: white;
+}
+.date1{
+	font-size: 15px;
+}
+.another-c{
+    display: flex;
+}
+.configure{
+    background: black;
+    /* border-bottom: 2px groove white; */
+    height: 100px;
+}
+
+.title{
+    color: white;
+    /* padding: 50px; */
+    margin-top: 35px;
+    margin-left: 30px;
+}
+.field{
+    color: white;
+}
+.inner-conf{
+    /* margin-top: 5px; */
+    display: flex;
+    height: 100px;
+    /* justify-content: space-around; */
+}
+#ip{
+    margin-top: 37px;
+    margin-left: 60px;
+}
+.ip-class{
+    margin-left: 5px;
+    width: 80px;
+    height: 30px;
+    margin-bottom: 100px;
+    background: rgb(27, 36, 56);
+    border: none;
+    color: white;
+}
+.input-container{
+    margin-left: 50px;
+    display: flex;
+}
+#ipdiv{
+    margin-top: 30px;
+    width: 800px;
+    height: 40px;
+}
+.temprature{
+    display: flex;
+    margin-top: 0px ;
+    background: black;
+    height: 100px;
+}
+.sensor{
+    display: flex;
+    margin-top: 0px ;
+    background: black;
+    height: 100px;
+}
+.sensor{
+    margin-top: 0px ;
+    background: black;
+    height: 100px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.inner-temprature{
+    margin-left: 80px;
+    margin-top: 40px;
+    display: flex;
+}
+.inner-sensor{
+    margin-left: 60px;
+    margin-top: 40px;
+    display: flex;
+}
+.farenhit{
+    margin-left: 80px;
+}
+.mattleloss{
+    margin-left: 80px;
+}
+#cel{
+    height: 25px;
+    width: 25px;
+    
+}
+#mattleloss{
+    height: 25px;
+    width: 25px;
+    
+}
+#remaining{
+    height: 25px;
+    width: 25px;
+    margin-left: 8px;
+}
+#fer{
+    height: 25px;
+    width: 25px;
+    margin-left: 55px;
+}
+.rad{
+   font-size: 20px;
+   margin-bottom: 5px;
+}
+
+.setdate{
+    display: flex;
+    background: black;
+    height: 100px;
+    border-bottom: 1px groove white;
+}
+.date{
+    display: flex;
+}
+.time{
+    display: flex;
+    margin-left: 100px;
+}
+.date-content{
+    display: flex;
+    margin-left: 85px;
+    margin-top: 37px;
+}
+
+.calender,.clock{
+    margin-left: 5px;
+}
+.picker{
+    width: 200px;
+    height: 30px;
+    background: rgb(27, 36, 56);
+    border: none;
+    border-radius: 5px;
+}
+.dateheading,.timeheading{
+    margin-top: 5px;
+}
+.refresh{
+    display: flex;
+    background: black;
+    height: 100px;
+    justify-content: center;
+}
+.rbutton{
+    font-size: 25px;
+    height: 60px;
+    width: 1000px;
+    background-color: rgb(27, 36, 56);
+    border: none;
+    margin-top: 18px;
+    border-radius: 5px;
+}
+.remaining,.mattleloss{
+    display: flex;
+}
+.remaining-label,.mattleloss-label{
+    margin-left: 15px;
+}
+.celcious,.farenhit{
+    display: flex;
+}
+.tempclass{
+    margin-left: 5px;
+}
+.fid{
+    margin-left: 46px;
+}
+.center-class{
+    margin-left: 300px;
+}
+.dot{
+    margin-left: 2px;
+    margin-top:20px;
+}
+
+
+
+@media (min-width: 500px) and (max-width:800px) {
+	header{
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-links{
+		display: flex;
+		flex-direction: column;
+	}
+	.container{
+		display: flex;
+		flex-direction: column;
+		height: 220px;
+	}
+	.another-c{
+		display: flex;
+		flex-direction: row;
+	}
+	
+}
