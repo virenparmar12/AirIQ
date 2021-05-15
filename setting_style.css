@@ -42,7 +42,7 @@ nav{
 }
 .nav-link {
 	color: #5f5f79;
-	font-size: 18px;
+	/* font-size: 18px; */
 	text-decoration: none;
 	margin-right: 2px;
 }

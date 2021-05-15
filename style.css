@@ -11,7 +11,7 @@ header{
 	align-items: center;
 	flex-wrap: wrap;
 }
-
+sss
 .home-logo,
 .airiq,
 .nav-links{
@@ -180,6 +180,7 @@ nav{
 	.nav-links{
 		display: flex;
 		flex-direction: column;
+		
 		/* margin-right: 150px; */
 	}
 	.rclass{
