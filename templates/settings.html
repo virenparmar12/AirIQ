@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/setting_style.css' %} ">
+    <title>Settings</title>
+</head>
+
+<body>
+    <header>
+        <div class="home-logo">
+            <a href="/"><img src="{% static 'images/outline_home_white_24dp.png' %} " style="height: 50px;" alt=""></a>
+        </div>
+        <div class="airiq fcolor">
+            <h1>AirIQ</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link fcolor date" href="#">
+                        <script> document.write(new Date().toDateString());</script>
+                    </a></li>
+                <li><a class="nav-link fcolor date" href="#">
+                        <script> document.write(new Date().toLocaleTimeString());</script>
+                    </a></li>
+                <div class="another-c">
+                    <li><a class="nav-link fcolor" href="#">
+                            <!-- <h5>questions</h5> -->
+                            <img src="{% static 'images/gquestion.png' %} " style="height: 20px;" alt="">
+                        </a></li>
+                    <li><a class="nav-link fcolor rclass" href="">
+                            <img src="{% static 'images/outline_settings_white_24dp.png' %} " style="height: 20px;" alt="">
+                        </a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="configure">
+                <div class="inner-conf">
+                    <div>
+                        <h3 class="title center-class">Configure Modbus</h3>
+                    </div>
+                    <div>
+                        <h4 class="field" id="ip">IP Address</h4>
+                    </div>
+                    <div id="ipdiv">
+                        <div class="input-container">
+                            <div>
+                                <input class="ip-class" type="number">
+                            </div>
+                            <div class="dot">
+                                &#8226
+                            </div>
+                            <div>
+                                <input class="ip-class" type="number">
+                            </div>
+                            <div class="dot">
+                                &#8226
+                            </div>
+                            <div>
+                                <input class="ip-class" type="number">
+                            </div>
+                            <div class="dot">
+                                &#8226
+                            </div>
+                            <div>
+                                <input class="ip-class" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="temprature">
+                <div>
+                    <h3 class="title center-class">Temprature Units</h3>
+                </div>
+                <div class="inner-temprature">
+                    <div class="celcious">
+                        <div class="cel-radio">
+                            <input type="radio" id="cel" name="temp" value="Celcious">
+                        </div>
+                        <div class="cel-label">
+                            <label class="fcolor rad tempclass" for="male">Celsius</label>
+                        </div>
+                    </div>
+                    <div class="farenhit">
+                        <div class="fer-radio">
+                            <input type="radio" id="fer" class="fid" name="temp" value="Fahrenheit">
+                        </div>
+                        <div class="fer-label">
+                            <label class="fcolor rad tempclass" for="female">Fahrenheit</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="temprature">
+                <div>
+                    <h3 class="title center-class">Sensor Life Display</h3>
+                </div>
+                <div class="inner-sensor">
+                    <div class="remaining">
+                        <div class="remaining-radio">
+                            <input type="radio" id="remaining" name="sensor" value="Celcious">
+                        </div>
+                        <div class="remaining-label">
+                            <label class="fcolor rad" for="male">%Remaining</label>
+                        </div>
+                    </div>
+                    <div class="mattleloss">
+                        <div class="mattleloss-radio">
+                            <input type="radio" id="mattleloss" name="sensor" value="Fahrenheit">
+                        </div>
+                        <div class="mattleloss-label">
+                            <label class="fcolor rad" for="female">Mattle loss(A/5,000)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="setdate">
+                <div class="Date&time">
+                    <h3 class="title center-class">Set Date & Time</h3>
+                </div>
+                <div class="date-content">
+                    <div class="date">
+                        <div class="dateheading">
+                            <h4 class="field">Date</h4>
+                        </div>
+                        <div class="calender">
+                            <input type="date" class="picker">
+                        </div>
+                    </div>
+                    <div class="time">
+                        <div class="timeheading">
+                            <h4 class="field">Time</h4>
+                        </div>
+                        <div class="clock">
+                            <input type="time" class="picker">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="refresh">
+                <div class="refresh-button">
+                    <button class="rbutton">Force Refresh Device</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </main>
+</body>
+
+</html>
