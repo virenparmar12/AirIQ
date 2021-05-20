@@ -9,7 +9,7 @@ class HomeData(models.Model):
     relative_humidity = models.IntegerField()
 
     def __str__(self):
-        return self.relative_humidity
+        return self.differential_pressure
 
 
 class CopperSilver(models.Model):

@@ -38,7 +38,8 @@ nav{
     justify-content: space-around;
 }
 .fcolor{
-    color: white;
+    color: rgba(255, 255, 255, 0.80);
+	/* opacity: 80%; */
 }
 .date{
 	font-size: 15px;
@@ -50,7 +51,7 @@ nav{
 	height: 100px;
 	padding: 20px;
 	flex-wrap: wrap;
-	border-bottom:1px groove white;
+	border-bottom:1px groove rgb(161, 144, 144);
 }
 .container::after{
 	border: 5px solid red;
@@ -71,7 +72,7 @@ nav{
 	height: 380px;
 }
 .info-li{
-	border: 1px groove white;
+	border: 1px groove rgb(161, 144, 144);
 	list-style-type: none;
 	padding: 15px;
 	width: 400px;
@@ -79,7 +80,7 @@ nav{
 	font-size: 100px;
 }
 .info-li2{
-	border: 1px groove white;
+	border: 1px groove rgb(161, 144, 144);
 	list-style-type: none;
 	padding: 20px;
 	width: 400px;
@@ -204,7 +205,7 @@ nav{
 	header{
 		display: flex;
 		/* flex-direction: column; */
-		height: 70px;
+		height: 80px;
 	}
 	.nav-links{
 		display: flex;
@@ -213,12 +214,32 @@ nav{
 	}
 	.container{
 		display: flex;
-		flex-direction: column;
-		height: 220px;
+		/* flex-direction: column; */
+		height: 80px;
 	}
 	.another-c{
 		display: flex;
 		flex-direction: row;
+	}
+	.info-li{
+		height: 130px;
+		width: 300px;
+		font-size: 50px;
+	}
+	.info-li2{
+		height: 40px;
+		width: 300px;
+		padding: 10px;
+	}
+	.copper,.silver{
+		height: 300px;
+		margin-top: 20px;
+	}
+	.copperfont,.silverfont{
+		font-size: 20px;
+	}
+	.sensorwidth{
+		height: 70px;
 	}
 	
 }
@@ -288,3 +309,4 @@ nav{
 	
 	
 }
+
