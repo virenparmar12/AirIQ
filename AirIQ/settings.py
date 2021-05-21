@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'AirIQ.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'airiqdatabase',
-        'USER': 'root',
-        'PASSWORD': 'ThePenguina@123.',  # ThePenguina@123.
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 # CREATE USER 'root'@'localhost' IDENTIFIED WITH authentication_plugin BY '123'
