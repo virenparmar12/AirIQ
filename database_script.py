@@ -29,5 +29,5 @@ for i in range(7):
     # print(value)
 # print('%.2f' % register_value_list[4])
 homedata = HomeData(
-    differential_pressure='%.2f' % register_value_list[4], temprature=register_value_list[2], relative_humidity=register_value_list[3])
+    differential_pressure='%.2f' % register_value_list[4], temprature=register_value_list[2], relative_humidity=register_value_list[3],metal_loss1=register_value_list[0],metal_loss2=register_value_list[1],cr1=register_value_list[5],cr2=register_value_list[6])
 homedata.save()

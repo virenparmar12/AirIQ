@@ -7,6 +7,11 @@ class HomeData(models.Model):
     differential_pressure = models.FloatField()
     temprature = models.IntegerField()
     relative_humidity = models.IntegerField()
+    metal_loss1 = models.IntegerField()
+    metal_loss2 = models.IntegerField()
+    cr1 = models.IntegerField()
+    cr2 = models.IntegerField()
+
 
     def __str__(self):
         return str(self.id)

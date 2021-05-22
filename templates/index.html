@@ -44,16 +44,16 @@
         <div class="container">
             <div class="pressure fcolor">
                 <h5 class="title">DIFFERENTIAL PRESSURE</h5>
-                <h2 id="press">{{data.differential_pressure}} i.w.g.</h2>
+                <h2><span id="press">{{data.differential_pressure}}</span>  i.w.g.</h2>
             </div>
             <div class="temprature fcolor">
                 <h5 class="title">TEMPRATURE</h5>
-                <h2 id="temp"><img src="{% static 'images/outline_thermostat_white_48dp.png' %} " style="height: 20px;" alt="">
-                    {{data.temprature}} F</h2>
+                <h2><img src="{% static 'images/outline_thermostat_white_48dp.png' %} " style="height: 20px;" alt="">
+                   <span id="temp">{{data.temprature}}</span> F</h2>
             </div>
             <div class="relativehumidity fcolor">
                 <h5 class="title">RELATIVE HUMIDITY</h5>
-                <h2 id="relahu"><img src="{% static 'images/humidity.png' %} " style="height: 20px;" alt=""> {{data.relative_humidity}}</h2>
+                <h2><img src="{% static 'images/humidity.png' %} " style="height: 20px;" alt=""><span id="relahu">{{data.relative_humidity}}</span> </h2>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
                     <li class="info-li2 fcolor">
                         <h1 class="copperfont">COPPER</h1>
                     </li>
-                    <li class="info-li fcolor"><span>100</span><span id="unit">a/mo
+                    <li class="info-li fcolor"><span id="cr1"></span><span id="unit">a/mo
                             <div>
                                 <button class="c-button">CORROSION RATE:G1</button>
                             </div>
@@ -87,7 +87,7 @@
                     <li class="info-li2 fcolor">
                         <h1 class="silverfont">SILVER</h1>
                     </li>
-                    <li class="info-li fcolor"><span>100</span><span id="unit">a/mo
+                    <li class="info-li fcolor"><span id="cr2"></span><span id="unit">a/mo
                             <div>
                                 <button class="c-button">CORROSION RATE:G1</button>
                             </div>
@@ -155,15 +155,27 @@
             type:'GET',
             url:"{% url 'getData' %}",
             success:function(response){
+
                 $('#press').empty()
-                var temp_press = response.Home_data.differential_pressure +" i.w.g."
+                var temp_press = response.Home_data.differential_pressure
                 $('#press').append(temp_press)
+
                 $('#temp').empty()
-                var temp_temprature = response.Home_data.temprature + " F"
+                var temp_temprature = response.Home_data.temprature
                 $('#temp').append(temp_temprature)
+
                 $('#relahu').empty()
-                var temp_rela = response.Home_data.relative_humidity + " %"
+                var temp_rela = response.Home_data.relative_humidity
                 $('#relahu').append(temp_rela)
+                
+                $('#cr1').empty()
+                var temp_cr1 = response.Home_data.cr1
+                $('#cr1').append(temp_cr1)
+
+                $('#cr2').empty()
+                var temp_cr2 = response.Home_data.cr2
+                $('#cr2').append(temp_cr2)
+
                 console.log(response.Home_data.id)
 
             },
