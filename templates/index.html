@@ -44,16 +44,16 @@
         <div class="container">
             <div class="pressure fcolor">
                 <h5 class="title">DIFFERENTIAL PRESSURE</h5>
-                <h2>{{data.differential_pressure}} i.w.g.</h2>
+                <h2 id="press">{{data.differential_pressure}} i.w.g.</h2>
             </div>
             <div class="temprature fcolor">
                 <h5 class="title">TEMPRATURE</h5>
-                <h2><img src="images/outline_thermostat_white_48dp.png" style="height: 20px;" alt="">
+                <h2 id="temp"><img src="{% static 'images/outline_thermostat_white_48dp.png' %} " style="height: 20px;" alt="">
                     {{data.temprature}} F</h2>
             </div>
             <div class="relativehumidity fcolor">
                 <h5 class="title">RELATIVE HUMIDITY</h5>
-                <h2><img src="images/humidity.png" style="height: 20px;" alt=""> {{data.relative_humidity}}%</h2>
+                <h2 id="relahu"><img src="{% static 'images/humidity.png' %} " style="height: 20px;" alt=""> {{data.relative_humidity}}</h2>
             </div>
         </div>
 
@@ -63,7 +63,7 @@
                     <li class="info-li2 fcolor">
                         <h1 class="copperfont">COPPER</h1>
                     </li>
-                    <li class="info-li fcolor">100<span id="unit">a/mo
+                    <li class="info-li fcolor"><span>100</span><span id="unit">a/mo
                             <div>
                                 <button class="c-button">CORROSION RATE:G1</button>
                             </div>
@@ -87,7 +87,7 @@
                     <li class="info-li2 fcolor">
                         <h1 class="silverfont">SILVER</h1>
                     </li>
-                    <li class="info-li fcolor">100<span id="unit">a/mo
+                    <li class="info-li fcolor"><span>100</span><span id="unit">a/mo
                             <div>
                                 <button class="c-button">CORROSION RATE:G1</button>
                             </div>
@@ -142,6 +142,39 @@
             document.querySelector('.bg-model').style.display = 'none'
         });
     </script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+  <script>
+  $(document).ready(function(){
+    setInterval(function()
+    {
+        $.ajax({
+            type:'GET',
+            url:"{% url 'getData' %}",
+            success:function(response){
+                $('#press').empty()
+                var temp_press = response.Home_data.differential_pressure +" i.w.g."
+                $('#press').append(temp_press)
+                $('#temp').empty()
+                var temp_temprature = response.Home_data.temprature + " F"
+                $('#temp').append(temp_temprature)
+                $('#relahu').empty()
+                var temp_rela = response.Home_data.relative_humidity + " %"
+                $('#relahu').append(temp_rela)
+                console.log(response.Home_data.id)
+
+            },
+                error:function(response){
+                    
+                }
+        });
+    },10000);
+
+  });
+  </script>
 </body>
 
 </html>
