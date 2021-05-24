@@ -28,7 +28,12 @@ def getData(request):
     response["differential_pressure"] = Home_data.differential_pressure
     response["relative_humidity"] = Home_data.relative_humidity
 
+    # json_data = serializers.serialize('json',HomeData.objects.filter(id=latest_data_id.id))
+    # data = {'Home_data': Home_data}
+    # print(json.dumps(list(Home_data))[0])
+
     return JsonResponse({"Home_data": response})
+
 
 
 def every_second(request):
