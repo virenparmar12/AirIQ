@@ -27,6 +27,8 @@ def getData(request):
     response["temprature"] = Home_data.temprature
     response["differential_pressure"] = Home_data.differential_pressure
     response["relative_humidity"] = Home_data.relative_humidity
+    response["corrosion_rate1"] = Home_data.corrosion_rate1
+    response["corrosion_rate2"] = Home_data.corrosion_rate2
 
     # json_data = serializers.serialize('json',HomeData.objects.filter(id=latest_data_id.id))
     # data = {'Home_data': Home_data}

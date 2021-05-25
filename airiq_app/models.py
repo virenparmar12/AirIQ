@@ -11,6 +11,8 @@ class HomeData(models.Model):
     metal_loss2 = models.IntegerField()
     cr1 = models.IntegerField()
     cr2 = models.IntegerField()
+    corrosion_rate1=models.CharField(max_length=5)
+    corrosion_rate2=models.CharField(max_length=5)
 
 
     def __str__(self):
